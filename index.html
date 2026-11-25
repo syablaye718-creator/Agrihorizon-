@@ -1,27 +1,107 @@
-🌱 AgriHorizon
-L'avenir de l'agriculture sénégalaise
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriHorizon, la plateforme numérique au service de l'agriculture, de l'élevage et de l'agroalimentaire au Sénégal.">
+  <meta name="theme-color" content="#146b3a">
+  <title>AgriHorizon | L'agriculture sénégalaise, connectée à l'avenir</title>
+  <style>
+    :root{--green:#146b3a;--deep:#0b4228;--lime:#b7df75;--cream:#f7faf4;--ink:#183326;--muted:#63766a;--line:#e4ece3}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:1.35rem;letter-spacing:-.6px;color:var(--deep)}
+    .logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#1d8b4e,#0b4228);display:grid;place-items:center;color:#fff;font-size:23px;box-shadow:0 7px 18px #146b3a30}
+    nav{display:flex;align-items:center;gap:26px;font-size:.93rem;font-weight:650;color:#385444}
+    nav a:hover{color:var(--green)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;background:var(--green);color:white;font-weight:750;border:0}
+    .nav-cta:hover,.btn:hover{background:var(--deep)}.menu{display:none;background:none;border:0;font-size:26px;color:var(--deep)}
+    .hero{overflow:hidden;background:radial-gradient(circle at 82% 20%,#dff0c8 0,transparent 28%),linear-gradient(120deg,#f5faef,#edf6e7);padding:82px 0 76px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border-radius:99px;background:#e3f1d7;color:var(--green);font-size:.82rem;font-weight:800}
+    h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.06;letter-spacing:-2.8px;margin:20px 0;color:var(--deep)}
+    h1 span{color:#4b963d}.hero p{font-size:1.12rem;color:#52685a;max-width:560px;margin:0 0 28px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn.secondary{background:#fff;color:var(--green);border:1px solid #cfe0ca}
+    .hero-art{min-height:370px;border-radius:34px;background:linear-gradient(145deg,#1d8147,#0b4228);position:relative;display:grid;place-items:center;box-shadow:0 24px 55px #164f2d2b}
+    .sun{position:absolute;width:95px;height:95px;border-radius:50%;background:#f4d878;right:14%;top:13%;box-shadow:0 0 0 18px #f4d87822}
+    .field{position:absolute;bottom:0;left:0;right:0;height:47%;border-radius:0 0 34px 34px;background:repeating-linear-gradient(165deg,#83b94e 0 15px,#a5cf67 16px 30px)}
+    .field:before,.field:after{content:"";position:absolute;left:-5%;right:-5%;height:55px;border-radius:50%;border-top:7px solid #d5e99a;transform:rotate(-7deg)}
+    .field:before{top:20px}.field:after{top:75px}
+    .plant{position:relative;z-index:2;font-size:145px;filter:drop-shadow(0 15px 8px #052d1b55);margin-top:-30px}
+    .art-label{position:absolute;z-index:3;left:22px;top:22px;color:#fff;font-weight:800;font-size:.9rem;background:#ffffff20;border:1px solid #ffffff35;padding:9px 13px;border-radius:99px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:32px;max-width:550px}
+    .stat strong{display:block;font-size:1.2rem;color:var(--deep)}.stat span{font-size:.82rem;color:var(--muted)}
+    section{padding:78px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 38px}.section-head .eyebrow{margin-bottom:12px}
+    h2{font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-1.2px;line-height:1.15;color:var(--deep);margin:8px 0 12px}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff;transition:.2s;min-height:245px}
+    .card:hover{transform:translateY(-5px);box-shadow:0 16px 35px #153f2410;border-color:#c8ddc4}
+    .card-icon{width:58px;height:58px;border-radius:18px;background:#edf6e8;display:grid;place-items:center;font-size:30px;margin-bottom:19px}
+    .card h3{margin:0 0 9px;color:var(--deep);font-size:1.12rem}.card p{margin:0;color:var(--muted);font-size:.93rem}
+    .about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .about-visual{min-height:320px;border-radius:28px;background:linear-gradient(145deg,#dceecb,#a9d18b);display:grid;place-items:center;font-size:120px;position:relative;overflow:hidden}
+    .about-visual:after{content:"";position:absolute;width:260px;height:260px;border:2px solid #ffffff90;border-radius:50%;right:-70px;bottom:-100px}
+    .about-copy p{color:var(--muted)}.checks{padding:0;list-style:none;display:grid;gap:10px;margin:22px 0}.checks li:before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
+    .callout{background:var(--deep);color:#fff;border-radius:28px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .callout h2{color:#fff;margin:0 0 8px}.callout p{color:#d4e6d8;margin:0}.callout .btn{background:var(--lime);color:var(--deep);white-space:nowrap}
+    footer{background:#082e1c;color:#d8e8dc;padding:38px 0 22px}.footer-row{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer-brand{color:#fff}.footer-note{font-size:.86rem;color:#a9c3b1;margin-top:20px;border-top:1px solid #ffffff20;padding-top:18px}
+    @media(max-width:850px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero-art{min-height:300px}.cards{grid-template-columns:repeat(2,1fr)}.hero{padding-top:58px}}
+    @media(max-width:620px){.nav{height:66px}nav{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}nav.open{display:flex}.menu{display:block}.nav-cta{display:none}h1{letter-spacing:-1.7px}.hero{padding:48px 0}.hero-art{min-height:260px}.plant{font-size:110px}.stats{gap:8px}.stat span{font-size:.73rem}.cards{grid-template-columns:1fr}.card{min-height:auto}.callout,.footer-row{flex-direction:column;align-items:flex-start}.callout{padding:29px}.callout .btn{white-space:normal}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#accueil"><span class="logo">🌱</span>AgriHorizon</a>
+    <button class="menu" aria-label="Ouvrir le menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#accueil">Accueil</a><a href="#domaines">Nos domaines</a><a href="#apropos">À propos</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#domaines">Découvrir</a>
+  </div>
+</header>
 
-Accueil Nos domaines À propos
-Bienvenue sur AgriHorizon
-Conseils, innovations et solutions pour une agriculture durable au Sénégal.
+<main>
+  <section class="hero" id="accueil">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">🇸🇳 Au service du monde rural</span>
+        <h1>L'agriculture sénégalaise, <span>connectée à l'avenir.</span></h1>
+        <p>AgriHorizon est une plateforme dédiée à l'agriculture, à l'élevage et à l'agroalimentaire. Découvrons ensemble les idées et les pratiques qui font grandir le secteur agricole au Sénégal.</p>
+        <div class="hero-actions"><a class="btn" href="#domaines">Explorer nos rubriques</a><a class="btn secondary" href="#apropos">Qui sommes-nous ?</a></div>
+        <div class="stats"><div class="stat"><strong>🌾 Agriculture</strong><span>Produire durablement</span></div><div class="stat"><strong>🐄 Élevage</strong><span>Valoriser les filières</span></div><div class="stat"><strong>🌍 Sénégal</strong><span>Agir localement</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration de culture agricole"><span class="art-label">Cultivons les opportunités</span><div class="sun"></div><div class="plant">🌿</div><div class="field"></div></div>
+    </div>
+  </section>
 
-Découvrir nos domaines
-Nos domaines d'activité
-🌾 Agriculture
-Des conseils pour améliorer les cultures et les rendements agricoles.
+  <section id="domaines">
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">Nos domaines</span><h2>Un monde agricole à explorer</h2><p>Des ressources et des informations pour accompagner les acteurs du secteur agricole sénégalais.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🌾</div><h3>Agriculture</h3><p>Découvrez les cultures, les techniques de production, la gestion des sols et les pratiques agricoles durables.</p></article>
+        <article class="card"><div class="card-icon">🐄</div><h3>Élevage</h3><p>Explorez les activités d'élevage, l'alimentation animale, le bien-être du bétail et les bonnes pratiques.</p></article>
+        <article class="card"><div class="card-icon">🥫</div><h3>Agroalimentaire</h3><p>Découvrez la transformation, la conservation et la valorisation des produits locaux.</p></article>
+        <article class="card"><div class="card-icon">📘</div><h3>Conseils agricoles</h3><p>Des conseils pratiques pour mieux préparer, conduire et valoriser vos activités agricoles.</p></article>
+      </div>
+    </div>
+  </section>
 
-🐄 Élevage
-Des informations et solutions pour développer l'élevage.
+  <section class="about" id="apropos">
+    <div class="wrap about-grid">
+      <div class="about-visual">🌱🌍</div>
+      <div class="about-copy"><span class="eyebrow">Notre vision</span><h2>Faire grandir les idées et les initiatives agricoles</h2><p>AgriHorizon ambitionne de devenir un espace numérique de découverte et de partage autour du potentiel agricole du Sénégal.</p><p>Notre objectif est de rendre l'information agricole plus accessible et de mettre en valeur les savoir-faire, les producteurs et les initiatives locales.</p><ul class="checks"><li>Valoriser les ressources agricoles locales</li><li>Partager des connaissances utiles</li><li>Encourager l'innovation et l'entrepreneuriat</li></ul></div>
+    </div>
+  </section>
 
-🥫 Agroalimentaire
-Valorisation et transformation des produits locaux.
+  <section id="contact">
+    <div class="wrap"><div class="callout"><div><h2>Construisons l'avenir agricole ensemble.</h2><p>Une idée, une suggestion ou une collaboration ? Échangeons autour d'AgriHorizon.</p></div><a class="btn" href="mailto:syablaye718@gmail.com?subject=Contact%20AgriHorizon">Nous contacter</a></div></div>
+  </section>
+</main>
 
-📚 Conseils agricoles
-Des connaissances pratiques pour accompagner les producteurs.
-
-À propos d'AgriHorizon
-AgriHorizon est une plateforme dédiée au développement agricole au Sénégal.
-
-© 2026 AgriHorizon Sénégal
-
-Ensemble, cultivons l'avenir 🌱
+<footer><div class="wrap"><div class="footer-row"><a class="brand footer-brand" href="#accueil"><span class="logo">🌱</span>AgriHorizon</a><span>Au service du potentiel agricole sénégalais 🇸🇳</span></div><div class="footer-note">© <span id="year"></span> AgriHorizon. Tous droits réservés. | Une initiative numérique dédiée à l'agriculture sénégalaise.</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));</script>
+</body>
+  </html>
